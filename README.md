@@ -31,6 +31,7 @@ can be configured by setting the `BIND_ADDRESS` environment variable.
 - Uses environment variables to configure the connection for flexibility and ease of use.
 - Automatically crashes if the switch is not accessible, to be used with a process supervisor such
   as systemd, docker-compose, supervisord, Kubernetes, etc.
+- Distributed as a Docker image for easy deployment.
 
 ## License
 
