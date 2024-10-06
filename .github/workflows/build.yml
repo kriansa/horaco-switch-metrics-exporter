@@ -58,6 +58,7 @@ jobs:
 
       - name: Delete old images
         uses: actions/delete-package-versions@v5
+        continue-on-error: true
         with:
           package-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           package-type: container
