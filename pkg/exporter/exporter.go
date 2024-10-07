@@ -1,7 +1,6 @@
 package exporter
 
 import (
-	"fmt"
 	"log/slog"
 	"net/http"
 	"os"
@@ -65,7 +64,7 @@ func PoolMetrics(switchScraper *scraper.SwitchScraper) {
 		for {
 			metrics, err := switchScraper.FetchData()
 			if err != nil {
-				fmt.Println("error collecting switch metrics: %w", err)
+				slog.Error("error collecting switch metrics", "err", err)
 				os.Exit(1)
 			}
 

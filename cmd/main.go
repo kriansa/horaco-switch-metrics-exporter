@@ -39,7 +39,7 @@ func main() {
 
 	routerScraper := scraper.NewScraper(baseUrl, user, pass)
 	if err := exporter.StartServer(bindAddress, routerScraper); err != nil {
-		fmt.Println(fmt.Errorf("unable to start server: %w", err))
+		slog.Error("unable to start server", "err", err)
 		os.Exit(1)
 	}
 }
