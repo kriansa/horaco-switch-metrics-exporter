@@ -2,7 +2,9 @@
 # See: https://docs.github.com/en/actions/use-cases-and-examples/publishing-packages/publishing-docker-images
 name: Build and push Docker image
 
-on: ["push"]
+on:
+  push:
+    tags: ["*"]
 
 env:
   REGISTRY: ghcr.io
